@@ -1,7 +1,7 @@
-"use client"
+"use client";
 
-import { useState } from "react"
-import { ChevronLeft, ChevronRight, Star } from "lucide-react"
+import { useState } from "react";
+import { ChevronLeft, ChevronRight, Star } from "lucide-react";
 
 const testimonials = [
   {
@@ -25,28 +25,32 @@ const testimonials = [
     text: "The security features and compliance certifications give us peace of mind. Best platform investment we've made.",
     avatar: "👩‍🔬",
   },
-]
+];
 
 export default function Testimonials() {
-  const [currentIndex, setCurrentIndex] = useState(0)
+  const [currentIndex, setCurrentIndex] = useState(0);
 
   const next = () => {
-    setCurrentIndex((prev) => (prev + 1) % testimonials.length)
-  }
+    setCurrentIndex((prev) => (prev + 1) % testimonials.length);
+  };
 
   const prev = () => {
-    setCurrentIndex((prev) => (prev - 1 + testimonials.length) % testimonials.length)
-  }
+    setCurrentIndex(
+      (prev) => (prev - 1 + testimonials.length) % testimonials.length
+    );
+  };
 
   return (
-    <section className="py-20 px-4 md:px-8 relative">
+    <section id="testimonials" className="py-20 px-4 md:px-8 relative">
       <div className="w-full max-w-7xl mx-auto">
         {/* Section header */}
         <div className="text-center space-y-4 mb-16 animate-fade-up">
           <h2 className="text-4xl md:text-5xl font-bold">
             Loved by <span className="gradient-text">Thousands</span> of Teams
           </h2>
-          <p className="text-lg text-muted-foreground">See what our customers have to say about their experience.</p>
+          <p className="text-lg text-muted-foreground">
+            See what our customers have to say about their experience.
+          </p>
         </div>
 
         {/* Testimonials carousel */}
@@ -56,18 +60,25 @@ export default function Testimonials() {
               <div
                 key={index}
                 className={`p-8 rounded-2xl glass-effect transition-all duration-500 transform ${
-                  index === currentIndex ? "opacity-100 scale-100" : "opacity-50 scale-95"
+                  index === currentIndex
+                    ? "opacity-100 scale-100"
+                    : "opacity-50 scale-95"
                 }`}
               >
                 {/* Stars */}
                 <div className="flex gap-1 mb-4">
                   {Array.from({ length: testimonial.rating }).map((_, i) => (
-                    <Star key={i} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
+                    <Star
+                      key={i}
+                      className="w-5 h-5 fill-yellow-400 text-yellow-400"
+                    />
                   ))}
                 </div>
 
                 {/* Quote */}
-                <p className="text-foreground mb-6 leading-relaxed">"{testimonial.text}"</p>
+                <p className="text-foreground mb-6 leading-relaxed before:content-['“'] after:content-['”']">
+                  {testimonial.text}
+                </p>
 
                 {/* Author */}
                 <div className="flex items-center gap-3">
@@ -75,8 +86,12 @@ export default function Testimonials() {
                     {testimonial.avatar}
                   </div>
                   <div>
-                    <p className="font-semibold text-foreground">{testimonial.name}</p>
-                    <p className="text-sm text-muted-foreground">{testimonial.role}</p>
+                    <p className="font-semibold text-foreground">
+                      {testimonial.name}
+                    </p>
+                    <p className="text-sm text-muted-foreground">
+                      {testimonial.role}
+                    </p>
                   </div>
                 </div>
               </div>
@@ -101,5 +116,5 @@ export default function Testimonials() {
         </div>
       </div>
     </section>
-  )
+  );
 }

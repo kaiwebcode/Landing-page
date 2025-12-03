@@ -1,6 +1,6 @@
-"use client";
+"use client"
 
-import { Check, ChevronRight } from "lucide-react";
+import { Check, ChevronRight } from "lucide-react"
 
 const plans = [
   {
@@ -50,11 +50,11 @@ const plans = [
     ],
     highlighted: false,
   },
-];
+]
 
 export default function Pricing() {
   return (
-    <section className="py-20 px-4 md:px-8 relative">
+    <section id="pricing" className="py-20 px-4 md:px-8 relative">
       <div className="w-full max-w-7xl mx-auto">
         {/* Section header */}
         <div className="text-center space-y-4 mb-16 animate-fade-up">
@@ -62,8 +62,7 @@ export default function Pricing() {
             Simple, <span className="gradient-text">Transparent</span> Pricing
           </h2>
           <p className="text-lg text-muted-foreground">
-            Choose the perfect plan for your needs. Always flexible to scale up
-            or down.
+            Choose the perfect plan for your needs. Always flexible to scale up or down.
           </p>
         </div>
 
@@ -82,16 +81,12 @@ export default function Pricing() {
                 {/* Header */}
                 <div>
                   <h3 className="text-2xl font-bold mb-2">{plan.name}</h3>
-                  <p className="text-muted-foreground text-sm mb-4">
-                    {plan.description}
-                  </p>
+                  <p className="text-muted-foreground text-sm mb-4">{plan.description}</p>
                   <div className="space-y-1">
                     <div className="text-4xl font-bold">
                       <span className="gradient-text">{plan.price}</span>
                     </div>
-                    <p className="text-sm text-muted-foreground">
-                      {plan.period}
-                    </p>
+                    <p className="text-sm text-muted-foreground">{plan.period}</p>
                   </div>
                 </div>
 
@@ -107,7 +102,7 @@ export default function Pricing() {
 
                 {/* CTA Button */}
                 <button
-                  className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center gap-2 group ${
+                  className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center gap-2 group cursor-pointer ${
                     plan.highlighted
                       ? "bg-linear-to-r from-blue-500 to-purple-500 text-white hover:shadow-lg hover:shadow-blue-500/50 hover:scale-105"
                       : "glass-effect hover:bg-white/20"
@@ -125,12 +120,10 @@ export default function Pricing() {
         <div className="text-center mt-12 animate-fade-up stagger-2">
           <p className="text-muted-foreground">
             Need more details?{" "}
-            <button className="text-blue-500 hover:text-purple-500 font-semibold transition-colors">
-              View FAQs
-            </button>
+            <button className="text-blue-500 hover:text-purple-500 font-semibold transition-colors">View FAQs</button>
           </p>
         </div>
       </div>
     </section>
-  );
+  )
 }

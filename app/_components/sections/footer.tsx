@@ -10,7 +10,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
           {/* Brand */}
           <div className="space-y-4">
-            <h3 className="font-bold text-xl">v0 Platform</h3>
+            <h3 className="font-bold text-xl">PulseAI Platform</h3>
             <p className="text-sm text-muted-foreground leading-relaxed">
               Build, deploy, and scale your applications with confidence.
             </p>
@@ -102,7 +102,7 @@ export default function Footer() {
         <div className="border-t border-border/50 py-8">
           <div className="flex flex-col md:flex-row items-center justify-between gap-8">
             {/* Copyright */}
-            <p className="text-sm text-muted-foreground">© 2025 v0 Platform. All rights reserved.</p>
+            <p className="text-sm text-muted-foreground">© 2025 PulseAI Platform. All rights reserved.</p>
 
             {/* Social links */}
             <div className="flex gap-4">

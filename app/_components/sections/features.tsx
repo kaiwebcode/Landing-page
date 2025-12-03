@@ -40,7 +40,7 @@ export default function Features() {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null)
 
   return (
-    <section className="py-20 px-4 md:px-8 relative">
+    <section id="features" className="py-20 px-4 md:px-8 relative">
       <div className="w-full max-w-7xl mx-auto">
         {/* Section header */}
         <div className="text-center space-y-4 mb-16 animate-fade-up">
